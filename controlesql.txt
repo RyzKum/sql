@@ -1,7 +1,13 @@
-		1/SELECT * FROM film WHERE date_sortie > 1960;
-SELECT * FROM film WHERE date_sortie < 1960; 2/
+1/
+
+SELECT * FROM film WHERE date_sortie > 1960;
+SELECT * FROM film WHERE date_sortie < 1960;
+
+2/
 UPDATE `film` SET `description` = 'goooooooood movie' WHERE `film`.`id` = 35
+
 3/
+
 INSERT INTO `film`(`id`, `titre`, `slug`, `image`, `prix`, `description`, `date_sortie`) VALUES ('1','My Little Pony','my_little_pony','none.png','15','VERY GOOD FILM WITH PIRATE AND PONY','2020-10-10')
 
 INSERT INTO `films_categs` (`id_film`, `id_categorie`) VALUES ('1', '35');
@@ -9,20 +15,22 @@ INSERT INTO `films_categs` (`id_film`, `id_categorie`) VALUES ('1', ’49
 INSERT INTO `films_categs` (`id_film`, `id_categorie`) VALUES ('1', ’51’);
 
 4/
+
 SELECT com.commentaire, fi.*, us.* FROM `commentaire` AS com
 INNER JOIN film AS fi ON c.id_film = fi.id
 INNER JOIN user AS us ON c.id_user = us.id;
+
 5/
+
 DELETE FROM film WHERE slug LIKE 't%';
 
 6/
 
 SELECT DISTINCT user.id, commentaire.id FROM user INNER JOIN commentaire ON user.id = commentaire.id_user;
 
-
 7/
-SELECT * FROM film INNER JOIN films_categs ON film.id = films_categs.id_film WHERE films_categs.id_categorie = 51
 
+SELECT * FROM film INNER JOIN films_categs ON film.id = films_categs.id_film WHERE films_categs.id_categorie = 51
 
 8/
 
