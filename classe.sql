@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : mar. 15 nov. 2022 à 14:51
+-- Généré le : mar. 15 nov. 2022 à 15:51
 -- Version du serveur :  5.7.34
 -- Version de PHP : 8.0.8
 
@@ -58,7 +58,7 @@ CREATE TABLE `matieres` (
 CREATE TABLE `prof` (
   `ID` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
-  `prenom` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
